@@ -27,14 +27,15 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
+    <div className="App">
       <GlobalStyle />
       <Nav />
       <main>
+        <input />
         <Title onClick={() => navigate('/')}>SEARCH FOR WHAT?</Title>
         <Routes>
           <Route
-            path='/'
+            path="/"
             element={
               <SearchPage
                 setSearchResult={setSearchResult}
@@ -45,13 +46,13 @@ function App() {
             }
           />
           <Route
-            path='/like'
+            path="/like"
             element={
               <FavoriteBlogs favorite={favorite} setFavorite={setFavorite} />
             }
           />
           <Route
-            path='/todo'
+            path="/todo"
             element={<ToDoList setFavorite={setFavorite} favorite={favorite} />}
           />
         </Routes>
